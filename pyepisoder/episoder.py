@@ -82,7 +82,7 @@ class DataStore(object):
 			self.logger.debug('Automatic schema updates disabled')
 			return
 
-		if meta['schema'] < '3':
+		if meta['schema'] < '4':
 			self.logger.info('Updating database schema')
 			self.episodes.drop()
 			self.shows.drop()
@@ -91,7 +91,7 @@ class DataStore(object):
 			self.session.begin()
 
 			insert = self.meta.insert().values(key='schema',
-					value=3)
+					value=4)
 			self.conn.execute(insert)
 
 
@@ -130,6 +130,7 @@ class DataStore(object):
 			Column('title', Text),
 			Column('totalnum', Integer),
 			Column('prodnum', Text),
+			Column('notified', Date),
 			extend_existing=True)
 
 		episodemapper = mapper(Episode, self.episodes, properties={
