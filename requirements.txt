@@ -1,4 +1,4 @@
-pyyaml
+pyyaml==3.12
 argparse
 sqlalchemy>=0.7
 tvdb_api
