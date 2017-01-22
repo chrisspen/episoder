@@ -2,4 +2,4 @@ pyyaml==3.12
 argparse==1.4.0
 sqlalchemy>=0.7
 tvdb-api==1.10
-six
+six==1.10.0
