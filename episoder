@@ -419,7 +419,7 @@ def loadConfig(args):
             parts = map(str.strip, line.split('='))
             config[parts[0]] = parts[1]
         elif line.startswith('src='):
-            logging.warn('Specifying shows in the configuration '
+            logging.warning('Specifying shows in the configuration '
                 'file is no longer supported.')
 
     rc.close()

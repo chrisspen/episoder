@@ -16,6 +16,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from __future__ import absolute_import
+from __future__ import print_function
 
 import re
 import os
@@ -29,6 +30,8 @@ except ImportError:
     import urllib2
 
 import yaml
+
+from six import text_type
 
 from tvdb_api import BaseUI, Tvdb, tvdb_shownotfound
 
@@ -303,10 +306,10 @@ class ConsoleRenderer(object):
         string = string.replace('%show', episode.show.name)
         string = string.replace('%season', str(episode.season))
         string = string.replace('%epnum', "%02d" % episode.episode)
-        string = string.replace('%eptitle', unicode(episode.title))
+        string = string.replace('%eptitle', text_type(episode.title))
         string = string.replace('%totalep', str(episode.total))
-        string = string.replace('%prodnum', unicode(episode.prodnum))
-        print ("%s%s%s" % (color, string.encode('utf8'), endColor))
+        string = string.replace('%prodnum', text_type(episode.prodnum))
+        print("%s%s%s" % (color, string.encode('utf8'), endColor))
 
 
     def render(self, episodes, color=True):
