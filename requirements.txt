@@ -1,0 +1,4 @@
+pyyaml
+argparse
+sqlalchemy>=0.7
+tvdb_api

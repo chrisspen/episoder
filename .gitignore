@@ -2,3 +2,6 @@
 *.swp
 /.project
 /.pydevproject
+/.settings/
+/MANIFEST
+/.tox/
