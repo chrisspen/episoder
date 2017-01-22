@@ -1,3 +1,10 @@
 recursive-include test/fixtures *
+recursive-include extras *
+recursive-include examples *
 include requirements.txt
 include requirements-test.txt
+include episoder.1
+include AUTHORS
+include CHANGELOG
+include COPYING
+include README.md

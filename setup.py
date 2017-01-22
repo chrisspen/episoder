@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-from distutils.core import setup
 from os import path
+from setuptools import setup
 
 import pyepisoder
 
@@ -32,7 +32,7 @@ def get_files():
     for fn in ['AUTHORS', 'CHANGELOG', 'COPYING', 'README.md']:
         files.append((path.join('doc', 'episoder'), [fn]))
     
-    files.append((path.join('doc', 'episoder', 'examples'), ['home.episoder']))
+    files.append((path.join('doc', 'episoder', 'examples'), []))
     
     return files
 

@@ -14,7 +14,9 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+from __future__ import print_function
 
+from six import text_type
 
 class Episode(object):
 
@@ -24,7 +26,7 @@ class Episode(object):
         self.season = int(season)
         self.episode = int(episode)
         self.airdate = date
-        self.prodnum = unicode(prodnum)
+        self.prodnum = text_type(prodnum)
         self.total = int(total)
         self.show_id = self._show.show_id
 
