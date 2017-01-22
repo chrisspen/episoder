@@ -6,3 +6,4 @@
 /MANIFEST
 /.tox/
 /episoder.egg-info/
+/.env/
