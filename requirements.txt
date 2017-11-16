@@ -1,5 +1,5 @@
 pyyaml==3.12
 argparse==1.4.0
 sqlalchemy==1.1.5
-tvdb-api==1.10
+tvdb-api==2.0
 six==1.11.0
